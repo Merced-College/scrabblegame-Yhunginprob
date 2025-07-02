@@ -1,0 +1,9 @@
+Reflect on your personal problem-solving process. How did your understanding of object-oriented programming (e.g., classes, constructors, and data structures like ArrayList) evolve as you worked on this task? What challenges did you encounter and how did you go about fixing them? Explain which LLM, your prompts, or internet help you used and how you debugged your code.
+
+Sample answer:
+
+Working on this assignment helped me solidify how to design simple classes and leverage Java’s Collections API. I started by writing my Word class to encapsulate each dictionary entry, ensuring it implemented Comparable so that I could sort and binary-search an ArrayList<Word>. Reading in the file taught me to handle FileNotFoundException and to trim input lines.
+
+Initially my binary search always returned “not found” because I forgot to normalize case; I fixed this by using compareToIgnoreCase and storing words in uppercase. Adding the letter-exchange and scoring improvements challenged me to think through user flow—validating that the guessed word actually uses only the letters in the rack. I wrote `usesOnlyRackLetters` to remove matched letters from a copy of the rack list.
+
+I used ChatGPT (o4-mini) for guidance on best practices—prompting it to show how to sort and binary-search custom objects, and how to manage Scanner inputs. Debugging was mainly println-driven: I printed the rack before and after exchanges and logged the dictionary size to confirm file loading succeeded. Overall, this project deepened my comfort with OOP design, exceptions, and core data structures in Java.
